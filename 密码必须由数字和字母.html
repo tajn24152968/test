@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <input type="password" name="pass" id="ipt">
+    <script>
+        var ipt=document.getElementById('ipt')
+        var reg=/^(?![0-9]+$)(?![a-zA-Z]+$)[0-9A-Za-z]{6,10}$/
+        ipt.onblur=function(){
+            if(reg.test(ipt.value)){
+           console.log(1)
+       }else {
+           console.log(2)
+       }
+        }
+    </script>
+</body>
+</html>
